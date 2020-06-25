@@ -1,19 +1,17 @@
 const axios = require('axios')
 const server = require('./../config').server
-const session = require('./../data/session')
 
 //Trường hợp điền vào form với thông tin email thì sẽ merge email luôn 
 
-const SESSION = ''
-const EMAIL = ''
+const SESSION = 'session-7'
+const EMAIL = 'thuanlv1@tnteco.vn'
 
 async function mergeProfile() {
     try {
-        for (let i = 0; i < session.length; i++) {
             const res = await axios({
                 method: 'post',
                 imeout: 1000,
-                url: `${server}/context.json?sessionId=${session[i]}`,
+                url: `${server}/eventcollector`,
                 data: {
                     "sessionId": SESSION,
                     "events": [{
@@ -22,19 +20,21 @@ async function mergeProfile() {
                         "properties": {},
                         "source": null,
                         "target": {
-                            "itemId": SESSION,
+                            "itemId": "13054a95-092d-4d7b-81f5-e4656c2ebc81",
                             "itemType": "cmsUser",
                             "scope": null,
                             "properties": {
-                                "email": EMAIL,
+                                "Email" : EMAIL
                             }
                         }
                     }]
                 }
             })
-            console.log(res)
+            console.log({
+                status: res.status,
+                data: res.data
+            })
 
-        }
     } catch (error) {
         console.error(error);
     }

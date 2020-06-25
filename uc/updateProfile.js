@@ -1,19 +1,25 @@
 const axios = require('axios')
 const server = require('./../config').server
-const session = require('./../data/session')
 const profiles = require('./../data/profiles')
 
 async function updateProfile() {
     try {
-        for (let i = 0; i < session.length; i++) {
+        for (let i = 0; i < profiles.length; i++) {
+            Object.keys(profiles[i]).forEach(key=>{
+                profiles[i][`properties.${key}`] = profiles[i][key]
+                delete profiles[i][key]
+            })
             const res = await axios({
                 method: 'post',
                 imeout: 1000,
                 url: `${server}/eventcollector`,
-                data : getData(session[i], profiles[i])
+                data : getData(`session-${i+1}`, profiles[i])
             })
-            console.log(res.status)
-            console.log(res.data)
+            console.log({
+                name : profiles[i][`properties.Name`],
+                status: res.status,
+                data: res.data
+            })
         }
     } catch (error) {
         console.error(error);

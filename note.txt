@@ -1,0 +1,8 @@
+1. Hiển thiện overview dữ liệu
+2. Khởi tạo session khi người dùng truy cập trang (node createSession) => show session-list => Tao thanh cong cac session trong he thong an danh.
+(nguoi dung dien thong tin vao form nen se co dinh cac truong)
+3. Khi người đùng điền thông tin vào form dữ liệu gồm tên thì mình sẽ lấy thông tin đó để gán thêm vào cho phiên
+4. Cập nhật thông tin người dùng
+5. Lấy thông tin người dùng theo Id
+(curl -X GET -u karaf:karaf http://10.254.60.132:8181/cxs/profiles/61f14370-501c-4f49-9eb0-6fb2a6b117a7 | json_pp)
+6. Lấy thông tin event của người dùng, các hoạt động của người dùng 

@@ -7,7 +7,7 @@ module.exports = [
         "Address": "Số 2, Ngõ 41/77 Phố Vọng, Hai Bà Trưng, Hà Nội",
         "Email": "duongcong186@gmail.com",
         "Phone": "0977269653",
-        "Creat by": "17/06/2020",
+        "Create by": "17/06/2020",
         "Update by": "18/06/2020"
     },
     {
@@ -45,7 +45,7 @@ module.exports = [
     {
         "Name": "Lê Văn Thuận",
         "CMND": "145427003",
-        "Passport": "B6712KP98"
+        "Passport No": "B6712KP98"
     },
     {
         "Name": "Ngô Thanh Tùng",
@@ -176,7 +176,7 @@ module.exports = [
     {
         "Name": "Lê Văn Cường",
         "Email": "cuonglv1@tnteco.vn",
-        "Nattional": "Việt Nam"
+        "National": "Việt Nam"
     },
     {
         "Name": "Đoàn Văn Khoán",
@@ -249,7 +249,7 @@ module.exports = [
         "Name": "Nguyễn Thùy Dung",
         "Email": "dungnt1@tnteco.vn",
         "Phone": "0363 498 675",
-        "Creat by": "17/05/2020",
+        "Create by": "17/05/2020",
         "Update by": "20/06/2020"
     },
     {
@@ -275,7 +275,7 @@ module.exports = [
         "Email": "china1@tnteco.vn",
         "CMND": "145426097",
         "Face id": "14",
-        "Creat by": "17/03/2020",
+        "Create by": "17/03/2020",
         "Update by": "18/05/2020"
     },
     {
@@ -318,7 +318,7 @@ module.exports = [
     {
         "Name": "Nguyễn Thu Giang",
         "Email": "giangnt2@tnteco.vn",
-        "Nattional": "Việt Nam",
+        "National": "Việt Nam",
         "Face id": "16",
         "Google id": "13"
     },

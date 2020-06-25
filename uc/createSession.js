@@ -1,15 +1,15 @@
 const axios = require('axios')
 const server = require('./../config').server
-const session = require('./../data/session')
+const profiles = require('./../data/profiles')
 
 
 async function createSession() {
     try {
-        for (let i = 0; i < session.length; i++) {
+        for (let i = 0; i < profiles.length; i++) {
             const res = await axios({
                 method: 'get',
                 imeout: 1000,
-                url: `${server}/context.json?sessionId=${session[i]}`,
+                url: `${server}/context.json?sessionId=session-${i+1}`,
             })
             console.log(res.status)
             console.log(res.data)
